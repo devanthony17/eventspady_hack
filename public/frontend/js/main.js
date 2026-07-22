@@ -2,12 +2,19 @@
   "use strict";
 
   // Preloader
-  $(window).on('load', function() {
+  $(document).ready(function() {
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function() {
         $(this).remove();
       });
     }
+    
+    // Fallback in case document ready doesn't fire for some reason
+    setTimeout(function() {
+      if ($('#preloader').length) {
+        $('#preloader').remove();
+      }
+    }, 3000);
   });
 
   // Back to top button

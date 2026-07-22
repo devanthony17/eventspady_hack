@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\OrganizationApiController;
 use App\Http\Controllers\ScannerApiController;
+use App\Http\Controllers\Api\FrontendApiController;
+
+Route::get('/frontend/home', [FrontendApiController::class, 'home']);
 
 
 /*
